@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction History</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar">
+
+    <div class="logo">
+        💳 LoanPredict
+    </div>
+
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/project">Predict Loan</a></li>
+        <li><a href="/history" class="active">History</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+
+</nav>
+
+<!-- History Section -->
+
+<section class="history-section">
+
+    <div class="history-card">
+
+        <h1>Loan Prediction History</h1>
+
+        <p>
+            All previous loan approval predictions are displayed below.
+        </p>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Name</th>
+                    <th>Income (₹)</th>
+                    <th>Credit Score</th>
+                    <th>Loan Amount (₹)</th>
+                    <th>Years Employed</th>
+                    <th>Points</th>
+                    <th>Status</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+            {% if history %}
+
+                {% for row in history %}
+
+                <tr>
+
+                    <td>{{ row.name }}</td>
+
+                    <td>{{ row.income }}</td>
+
+                    <td>{{ row.credit_score }}</td>
+
+                    <td>{{ row.loan_amount }}</td>
+
+                    <td>{{ row.years_employed }}</td>
+
+                    <td>{{ row.points }}</td>
+
+                    <td>
+
+                        {% if "Approved" in row.result %}
+
+                        <span class="approved">
+                            {{ row.result }}
+                        </span>
+
+                        {% else %}
+
+                        <span class="rejected">
+                            {{ row.result }}
+                        </span>
+
+                        {% endif %}
+
+
+                        
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            {% else %}
+
+                <tr>
+
+                    <td colspan="7" style="text-align:center; padding:30px;">
+
+                        No Predictions Available Yet.
+
+                    </td>
+
+                </tr>
+
+            {% endif %}
+
+            </tbody>
+
+        </table>
+
+        <br>
+
+        <div style="text-align:center;">
+
+            <a href="/project" class="btn">
+                New Prediction
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 Loan Approval Prediction System | Prediction History
+    </p>
+
+</footer>
+
+</body>
+</html>

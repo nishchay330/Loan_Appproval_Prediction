@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Approval Prediction System</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar">
+
+    <div class="logo">
+        💳 LoanPredict
+    </div>
+
+    <ul>
+
+        <li><a href="/">Home</a></li>
+
+        <li><a href="/project">Predict Loan</a></li>
+
+        <li><a href="/history">History</a></li>
+
+        <li><a href="/about">About</a></li>
+
+        <li><a href="/contact">Contact</a></li>
+
+    </ul>
+
+</nav>
+
+
+<section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>Loan Approval Prediction System</h1>
+
+        <p>
+            Predict loan approval instantly using our Machine Learning model.
+            Enter applicant information and receive an accurate approval
+            prediction in seconds.
+        </p>
+
+        <div class="buttons">
+
+            <a href="/project" class="btn">
+                Check Eligibility
+            </a>
+
+            <a href="/history" class="btn btn-outline">
+                View History
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="features">
+
+    <h2>Why Choose Our System?</h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>⚡ Fast Prediction</h3>
+
+            <p>
+                Get loan approval results within seconds using our trained
+                Machine Learning model.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🎯 Accurate</h3>
+
+            <p>
+                Uses important financial features like income,
+                credit score and employment history for prediction.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>🔒 Secure</h3>
+
+            <p>
+                Applicant information remains secure and is used only
+                for prediction purposes.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="info">
+
+    <div class="info-text">
+
+        <h2>Machine Learning Powered</h2>
+
+        <p>
+
+            Our intelligent Loan Approval Prediction System evaluates
+            an applicant's financial profile using advanced Machine
+            Learning algorithms.
+
+        </p>
+
+        <ul>
+
+            <li>✔ Monthly Income</li>
+
+            <li>✔ Credit Score</li>
+
+            <li>✔ Loan Amount</li>
+
+            <li>✔ Years Employed</li>
+
+            <li>✔ Points</li>
+
+        </ul>
+
+    </div>
+
+    <div class="info-image">
+
+        <img src="{{ url_for('static', filename='bank.avif') }}" alt="Loan">
+
+    </div>
+
+</section>
+
+
+
+<section class="cta">
+
+    <h2>Ready to Check Your Loan Eligibility?</h2>
+
+    <p>
+        Click below and let our Machine Learning model evaluate
+        your application instantly.
+    </p>
+
+    <a href="/project" class="btn">
+        Start Prediction
+    </a>
+
+</section>
+
+
+
+<footer>
+
+    <p>
+
+        © 2026 Loan Approval Prediction System |
+        Developed using Flask, HTML, CSS & Machine Learning
+
+    </p>
+
+</footer>
+
+</body>
+</html>
