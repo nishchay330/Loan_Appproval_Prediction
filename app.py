@@ -2,7 +2,7 @@ from flask import Flask, render_template, request,url_for
 import joblib
 
 # Load ML Model
-model = joblib.load(r"Model\dtc_load.lb")
+model = joblib.load(r"Model/dtc_load.lb")
 
 app = Flask(__name__)
 
